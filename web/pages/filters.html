@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../img/RTE_Logotype_interne_RVB_Bleu.svg" />
+    <title>Fiche de Coordination</title>
+  </head>
+  <body>
+    <div class="container_all">
+      <header>
+        <p class="header-text">GMR et Période</p>
+      </header>
+
+      <form action="">
+        <div id="container_indication">
+          <div class="loader"></div>
+          <div id="indication">Récupération des GMR en cours...</div>
+        </div>
+
+        <div id="container_indication_end" class="hidden">
+          <div class="loader"></div>
+          <div id="indication">Récupération des opérations ...</div>
+        </div>
+
+        <div class="solo_input" id="container_gmr">
+          <label>GMR</label>
+          <input
+            type="text"
+            id="gmr_search_bar"
+            placeholder="Chercher un GMR"
+          />
+          <div id="gmr_option"></div>
+        </div>
+
+        <div class="solo_input">
+          <label>Date de début</label>
+          <input type="date" id="date_start" required />
+        </div>
+
+        <div class="solo_input">
+          <label>Date de fin</label>
+          <input type="date" id="date_end" required />
+        </div>
+
+        <button id="getfilters" class="button_input">Suivant</button>
+      </form>
+
+      <footer></footer>
+    </div>
+
+    <script type="text/javascript" src="../eel.js"></script>
+    <script src="../js/filters.js"></script>
+  </body>
+</html>

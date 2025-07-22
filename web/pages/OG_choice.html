@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../img/RTE_Logotype_interne_RVB_Bleu.svg" />
+  <title>Fiche de Coordination</title>
+</head>
+
+<body>
+
+<div class="container_all">
+
+<header>
+  <p class="header-text">
+    Type d'intervention
+  </p>
+</header>
+
+<form action="">
+
+  <div class="solo_input solo_radio_input">
+    <div class="radio_input">
+      <input name="selection" type="radio" value="og" id="radio_og" checked>
+      <label>Opération Globale (OG)</label>
+    </div>
+  </div>
+
+  <div class="solo_input solo_radio_input">
+    <div class="radio_input">
+      <input name="selection" type="radio" value="ni" id="radio_ni">
+      <label>Note d'information (NI)</label>
+    </div>
+  </div>
+
+  <div class="container_search_bar">
+
+    <div class="container_list" id="container_list_og">
+
+      <input type="text" class="search_bar" id="search_bar_og" placeholder="Rechercher par OG">
+      <input type="checkbox" id="select_all_og" class="input_select_og_ni"> Tout selectionner </input>
+      <ul id="list_og">
+      </ul>
+
+    </div>
+
+    <div class="container_list hidden" id="container_list_ni">
+
+      <input type="text" class="search_bar" id="search_bar_ni" placeholder="Rechercher par NI">
+      <input type="checkbox" id="select_all_ni" class="input_select_og_ni"> Tout selectionner </input>
+      <ul id="list_ni"></ul>
+
+    </div>
+  </div>
+
+  <div class="duo_button">
+    <button class="button_input" id="go_back"> Retour </button>
+    <button class="button_input" id="generate_excel"> Générer </button>
+  </div>
+
+  <div id="container_indication" class="hidden">
+    <div class="loader"></div>
+    <div id="indication">  </div>
+  </div>
+
+</form>
+
+<footer></footer>
+
+</div>
+
+<script type="text/javascript" src="../eel.js"></script>
+<script src="../js/excel.js"></script>
+
+</body>
+</html>

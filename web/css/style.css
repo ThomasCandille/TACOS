@@ -1,0 +1,467 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Custom CSS */
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/NunitoSans-Regular.ttf");
+}
+
+body {
+  height: 100vh;
+  font-family: Nunito, sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+}
+
+.container_all {
+  width: 375px;
+  height: 677px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#connexion_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../img/eolienneautre.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header {
+  color: black;
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-inline: 10%;
+
+  img {
+    height: 120%;
+  }
+
+  p {
+    padding-left: 4%;
+    padding-top: 10%;
+    color: #11161a;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 120%;
+  }
+}
+
+#connexion_form {
+  background-color: white;
+  border-radius: 11px;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  height: 277px;
+  width: 300px;
+  filter: drop-shadow(0 0 0.5rem #6f767baa);
+}
+
+form {
+  color: black;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4%;
+
+  h1 {
+    color: #11161a;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 120%;
+  }
+
+  .solo_input {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 12%;
+    gap: 2px;
+
+    input,
+    select {
+      height: 35px;
+    }
+
+    .radio_input {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      input {
+        margin: 0;
+      }
+      label {
+        padding: 10px;
+      }
+    }
+  }
+
+  .solo_radio_input {
+    height: 4%;
+  }
+
+  .container_search_bar {
+    height: 60%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+
+    .container_list {
+      height: 100%;
+      width: 100%;
+
+      .search_bar {
+        height: 10%;
+        width: 100%;
+      }
+
+      .input_select_og_ni {
+        margin-top: 5%;
+      }
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        height: 70%;
+        width: 100%;
+        flex-direction: column;
+        overflow-y: scroll;
+        border: 1px solid black;
+        border-radius: 2px;
+        margin-top: 2%;
+
+        li {
+          padding-block: 8px;
+          padding-left: 5%;
+        }
+
+        :hover {
+          background-color: #e7edf7;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+button {
+  display: inline-flex;
+  height: 32px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: white;
+  border-radius: 5px;
+  background-color: #3d70ad;
+  border: 1px solid #3d70ad;
+}
+button:hover {
+  background-color: #2f5d9a;
+  cursor: pointer;
+}
+button:active {
+  background-color: #274a7d;
+}
+
+#getfilters{
+  position: fixed;
+  bottom: 20vh;
+}
+
+.duo_button {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#go_back {
+  width: 40%;
+  background-color: #ffffff00;
+  color: #3d70ad;
+  border: none;
+}
+#go_back:hover {
+  background-color: #3d70ad;
+  color: white;
+}
+#go_back:active {
+  background-color: #2f5d9a;
+}
+
+#generate_excel {
+  width: 40%;
+  background-color: #3d70ad;
+  color: white;
+}
+#generate_excel:hover {
+  background-color: #2f5d9a;
+}
+#generate_excel:active {
+  background-color: #274a7d;
+}
+
+#indication {
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container_gmr {
+  height: 30%;
+}
+
+#gmr_option {
+  list-style-type: none;
+  display: flex;
+  height: 70%;
+  flex-direction: column;
+  overflow-y: scroll;
+  border: 1px solid black;
+  border-radius: 2px;
+
+  .gmr {
+    padding-block: 5px;
+    padding-left: 5%;
+  }
+
+  :hover {
+    background-color: #e7edf7;
+    cursor: pointer;
+  }
+}
+
+footer {
+  height: 10%;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+  visibility: collapse;
+  height: 0;
+}
+
+.container_button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.element_connexion {
+  padding-inline: 10%;
+}
+
+input[type="radio"] {
+  accent-color: #3d70ad;
+}
+
+::placeholder {
+  padding-left: 4%;
+  font-family: Nunito, sans-serif;
+  font-size: 1.2em;
+}
+
+#container_indication, #container_indication_end {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  gap: 4%;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  box-sizing: border-box;
+  background: #fff;
+  mix-blend-mode: darken;
+  display: grid;
+  filter: blur(4px) contrast(10) hue-rotate(270deg);
+}
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  animation: l2 3s infinite linear;
+  background: #ff00ff;
+  border-radius: 50%;
+}
+.loader:after {
+  animation-delay: -0.8s;
+}
+@keyframes l2 {
+  12.5% {
+    border-radius: 37% 63% 70% 30% / 30% 62% 38% 70%;
+  }
+  25% {
+    border-radius: 84% 16% 15% 85% / 55% 79% 21% 45%;
+  }
+  37.5% {
+    border-radius: 73% 27% 74% 26% / 64% 32% 68% 36%;
+  }
+  50% {
+    border-radius: 73% 27% 18% 82% / 52% 32% 68% 48%;
+  }
+  62.5% {
+    border-radius: 33% 67% 18% 82% / 52% 75% 25% 48%;
+  }
+  75% {
+    border-radius: 12% 88% 69% 31% / 10% 66% 34% 90%;
+  }
+  87.5% {
+    border-radius: 50% 50% 70% 30% / 52% 62% 38% 48%;
+  }
+}
