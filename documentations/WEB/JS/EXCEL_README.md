@@ -13,12 +13,12 @@
 ## Aperçu du Fichier
 
 ### Description
-Le fichier [`excel.js`](../web/js/excel.js) constitue l'interface JavaScript pour la page de sélection des opérations et génération des fiches Excel dans l'application TACOS. Il gère l'affichage dynamique des listes d'opérations globales (OG) et de notes d'information (NI), les interactions utilisateur pour la sélection multiple, et le déclenchement du processus de génération des fiches de coordination.
+Le fichier [`excel.js`](../../../web/js/excel.js) constitue l'interface JavaScript pour la page de sélection des opérations et génération des fiches Excel dans l'application TACOS. Il gère l'affichage dynamique des listes d'opérations globales (OG) et de notes d'information (NI), les interactions utilisateur pour la sélection multiple, et le déclenchement du processus de génération des fiches de coordination.
 
 ### Type et Technologie
-- **Type** : Script JavaScript ES6+ côté client
+- **Type** : Script JavaScript ES6
 - **Technologie** : JavaScript moderne avec DOM manipulation et communication Eel
-- **Position** : Couche présentation frontend dans l'architecture [`web/js`](../web/js)
+- **Position** : Couche présentation frontend dans l'architecture [`web/js`](../../../web/js)
 
 ### Rôle dans l'Écosystème
 Ce fichier orchestre la dernière étape de l'interface utilisateur avant la génération des fiches Excel. Il fait le pont entre les données filtrées depuis le backend Python (via Eel) et les actions utilisateur pour la sélection finale des opérations à traiter. Il communique directement avec [`script.py`](../script.py) pour récupérer les listes OG/NI et déclencher la génération Excel.
@@ -239,13 +239,13 @@ def get_ni():
 ### Cas d'Usage Typiques
 
 #### Sélection Multiple d'Opérations
-```javascript
-// L'utilisateur peut :
-// 1. Rechercher dans la liste : "OG-2024-001"
-// 2. Sélectionner individuellement ou globalement
-// 3. Basculer entre modes OG/NI
-// 4. Déclencher la génération pour les éléments sélectionnés
-```
+
+L'utilisateur peut :
+1. Rechercher dans la liste : "OG-2024-001"
+2. Sélectionner individuellement ou globalement
+3. Basculer entre modes OG/NI
+4. Déclencher la génération pour les éléments sélectionnés
+
 
 #### Génération Excel Conditionnelle
 ```javascript
@@ -267,29 +267,6 @@ document.getElementById("generate_excel").onclick = () => {
 ```
 
 ## Configuration & Paramètres
-
-### Sélecteurs DOM Configurés
-```javascript
-// IDs des éléments requis dans le HTML
-const DOM_ELEMENTS = {
-  lists: {
-    og: "list_og",
-    ni: "list_ni"
-  },
-  containers: {
-    og: "container_list_og", 
-    ni: "container_list_ni"
-  },
-  searchBars: {
-    og: "search_bar_og",
-    ni: "search_bar_ni"  
-  },
-  selectAll: {
-    og: "select_all_og",
-    ni: "select_all_ni"
-  }
-};
-```
 
 ### Classes CSS Utilisées
 - **`.og`** : Classe appliquée aux checkboxes d'opérations globales
@@ -344,9 +321,6 @@ Les sélections utilisateur sont perdues lors de la navigation ou du rechargemen
 
 #### Gestion d'Erreur Limitée
 Pas de validation explicite des données reçues depuis le backend Python.
-
-#### Performance sur Grandes Listes
-La construction DOM synchrone pourrait ralentir l'interface avec des milliers d'opérations.
 
 ### Compatibilité Navigateur
 - **ES6+ Features** : Arrow functions, const/let, template literals
@@ -416,6 +390,4 @@ if (typeof eel === 'undefined') {
 - **Validation** : Ajouter des contrôles de sécurité pour les données externes
 
 #### Tests Recommandés
-- **Tests unitaires** : Validation des fonctions utilitaires de manipulation
-- **Tests d'intégration** : Communication Eel avec mock du backend
 - **Tests utilisateur** : Scénarios de sélection et génération complets

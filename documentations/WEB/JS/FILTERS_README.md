@@ -15,10 +15,10 @@
 **Type de fichier :** JavaScript côté client  
 **Technologie :** JavaScript ES6+ avec intégration Eel (Python-JavaScript bridge)  
 **Position dans l'architecture :** Module frontend pour la gestion des filtres GMR et dates dans l'application TACOS  
-**Fichier :** [`/home/candilletho/Bureau/TACOS/web/js/filters.js`](../../web/js/filters.js)
+**Fichier :** [`web/js/filters.js`](../web/js/filters.js)
 
 ### Description
-Ce fichier implémente la logique d'interface utilisateur pour la page de sélection des filtres GMR (Gestionnaire de Mission Régional) et de périodes temporelles. Il fait partie d'une application web qui génère des fiches de coordination pour des opérations électriques, servant d'intermédiaire entre l'interface utilisateur et le backend Python via le framework Eel.
+Ce fichier implémente la logique d'interface utilisateur pour la page de sélection des filtres GMR et de périodes temporelles. Il sert d'intermédiaire entre l'interface utilisateur et le backend Python via le framework Eel.
 
 ### Rôle dans l'écosystème
 - **Interface de filtrage :** Première étape du workflow utilisateur pour sélectionner les critères de recherche
@@ -90,8 +90,8 @@ Vérification que le GMR saisi existe dans la liste autorisée.
   - `#container_indication`, `#container_indication_end` : Indicateurs de chargement
 
 ### Fichiers Associés
-- **HTML :** [`filters.html`](../../web/pages/filters.html) - Interface utilisateur correspondante
-- **CSS :** [`style.css`](../../web/css/style.css) - Styles pour les classes `.gmr`, `.hidden`
+- **HTML :** [`filters.html`](../../../web/pages/filters.html) - Interface utilisateur correspondante
+- **CSS :** [`style.css`](../../../web/css/style.css) - Styles pour les classes `.gmr`, `.hidden`
 - **Backend :** Fonctions Python `get_gmr()` et `get_filters()` via Eel
 
 ## 4. Structure du Code

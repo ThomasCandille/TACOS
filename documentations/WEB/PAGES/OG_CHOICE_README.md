@@ -18,7 +18,7 @@
 **Rôle :** Deuxième étape du workflow permettant aux utilisateurs de choisir entre les Opérations Globales (OG) et les Notes d'Information (NI) pour la génération de fiches de coordination
 
 ### Description
-Le fichier [`OG_choice.html`](web/pages/OG_choice.html) constitue l'interface de sélection finale de l'application TACOS. Après avoir défini les filtres (GMR et dates), cette page présente les opérations disponibles sous forme de listes filtrables avec sélection multiple, permettant de générer les fiches Excel correspondantes.
+Le fichier [`OG_choice.html`](../../../web/pages/OG_choice.html) constitue l'interface de sélection finale de l'application TACOS. Après avoir défini les filtres (GMR et dates), cette page présente les opérations disponibles sous forme de listes filtrables avec sélection multiple, permettant de générer les fiches Excel correspondantes.
 
 ## Fonctionnalités Principales
 
@@ -64,7 +64,7 @@ Le fichier [`OG_choice.html`](web/pages/OG_choice.html) constitue l'interface de
 ```
 
 ### Navigation et Actions
-- **Bouton Retour** : Navigation vers [`filters.html`](web/pages/filters.html)
+- **Bouton Retour** : Navigation vers [`filters.html`](../../../web/pages/filters.html)
 - **Bouton Générer** : Lancement de la génération Excel
 - **Indicateur de progression** : Loader avec messages d'état
 
@@ -86,13 +86,13 @@ Le fichier [`OG_choice.html`](web/pages/OG_choice.html) constitue l'interface de
 ```
 
 ### Dépendances du Projet
-- **[style.css](web/css/style.css)** : Feuille de style principale avec classes spécialisées
-- **[excel.js](web/js/excel.js)** : Logique métier JavaScript pour la gestion des opérations
+- **[style.css](../../../web/css/style.css)** : Feuille de style principale avec classes spécialisées
+- **[excel.js](../../../web/js/excel.js)** : Logique métier JavaScript pour la gestion des opérations
 - **eel.js** : Bridge de communication avec le backend Python
 - **Images RTE** : Ressources d'identité visuelle corporative
 
 ### Intégration Backend
-- **[script.py](script.py)** : Fonctions Python exposées via Eel
+- **[script.py](../../../script.py)** : Fonctions Python exposées via Eel
 - **Base de données ANIS** : Source des opérations OG/NI
 - **Génération Excel** : Pipeline de traitement vers fichiers de coordination
 
@@ -129,7 +129,7 @@ Le fichier [`OG_choice.html`](web/pages/OG_choice.html) constitue l'interface de
 
 ### Flux d'Interaction Utilisateur
 1. **Chargement initial** : OG sélectionné, liste OG visible
-2. **Population des listes** : Appel [`excel.js`](web/js/excel.js) → `eel.get_og()` et `eel.get_ni()`
+2. **Population des listes** : Appel [`excel.js`](../../../web/js/excel.js) → `eel.get_og()` et `eel.get_ni()`
 3. **Basculement radio** : Masquage/affichage conditionnel des containers
 4. **Recherche temps réel** : Filtrage des éléments via JavaScript
 5. **Sélection multiple** : Gestion des checkboxes individuelles et globales
@@ -231,14 +231,14 @@ def generate_excel(operation):
 ### Considérations de Performance
 - **Filtrage côté client** : Recherche instantanée sans requête serveur
 - **Population différée** : Listes remplies après chargement page
-- **DOM minimal** : Éléments créés dynamiquement par [`excel.js`](web/js/excel.js)
+- **DOM minimal** : Éléments créés dynamiquement par [`excel.js`](../../../web/js/excel.js)
 - **Gestion mémoire** : Reset automatique des sélections non actives
 
 ### Patterns d'Architecture
 - **Progressive Enhancement** : Fonctionnalité de base HTML + amélioration JavaScript
 - **Event-Driven Design** : Interface réactive basée sur les événements utilisateur
 - **State Management** : Gestion d'état explicite via classes CSS et propriétés DOM
-- **Separation of Concerns** : Logique métier isolée dans [`excel.js`](web/js/excel.js)
+- **Separation of Concerns** : Logique métier isolée dans [`excel.js`](../../../web/js/excel.js)
 
 ### Optimisations Appliquées
 ```javascript
@@ -319,10 +319,10 @@ document.getElementById("search_bar_nouveau").addEventListener("keyup", function
 5. **Feedback utilisateur** : Utiliser les indicateurs de progression pour les opérations longues
 
 ### Fichiers Associés à Modifier
-- **[excel.js](web/js/excel.js)** : Logique métier et gestion des événements
-- **[script.py](script.py)** : Fonctions backend Eel pour nouveaux types d'opérations
-- **[style.css](web/css/style.css)** : Styles pour nouveaux éléments d'interface
-- **[query.py](query.py)** : Requêtes base de données pour nouveaux types d'opérations
+- **[excel.js](../../../web/js/excel.js)** : Logique métier et gestion des événements
+- **[script.py](../../../script.py)** : Fonctions backend Eel pour nouveaux types d'opérations
+- **[style.css](../../../web/css/style.css)** : Styles pour nouveaux éléments d'interface
+- **[query.py](../../../query.py)** : Requêtes base de données pour nouveaux types d'opérations
 
 ### Procédures de Débogage
 ```javascript

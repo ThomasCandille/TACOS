@@ -18,7 +18,7 @@
 **Rôle :** Interface de communication avec l'API Mathis/Dremio pour l'authentification et l'exécution de requêtes SQL sur la base de données ANIS
 
 ### Description
-Le fichier [`query_utils.py`](query_utils.py) constitue la couche d'abstraction entre l'application TACOS et l'API REST Mathis. Il gère l'authentification utilisateur via NNI/mot de passe, l'obtention de tokens d'autorisation, et l'exécution asynchrone de requêtes SQL avec gestion des résultats paginés.
+Le fichier [`query_utils.py`](../query_utils.py) constitue la couche d'abstraction entre l'application TACOS et l'API REST Mathis. Il gère l'authentification utilisateur via NNI/mot de passe, l'obtention de tokens d'autorisation, et l'exécution asynchrone de requêtes SQL avec gestion des résultats paginés.
 
 ## Fonctionnalités Principales
 
@@ -82,12 +82,12 @@ import urllib3   # Désactivation des warnings SSL
 ```
 
 ### Intégration avec l'Écosystème TACOS
-- **[script.py](script.py)** : Utilisation principale pour récupération de données
-- **[query.py](query.py)** : Définition des requêtes SQL métier
+- **[script.py](../script.py)** : Utilisation principale pour récupération de données
+- **[query.py](../query.py)** : Définition des requêtes SQL métier
 - **API Mathis/Dremio** : Service d'authentification et d'exécution SQL RTE
 
 ### Configuration d'Environnement
-- **Serveur de production** : `mathis.rte-france.com`
+- **Serveur de production / public** : `mathis.rte-france.com`
 - **Serveur d'intégration** : `mathis-integration.rte-france.com`
 - **SSL** : Vérification désactivée (`USE_SSL_VERIFICATION = False`)
 - **Base de données** : ANIS (données opérationnelles RTE)
@@ -399,8 +399,8 @@ def log_query_performance(query, execution_time, result_count):
 6. **Tests** : Mocker les appels réseau pour les tests unitaires
 
 ### Fichiers Associés à Modifier
-- **[script.py](script.py)** : Utilisation principale des fonctions
-- **[query.py](query.py)** : Définition des requêtes SQL
+- **[script.py](../script.py)** : Utilisation principale des fonctions
+- **[query.py](../query.py)** : Définition des requêtes SQL
 - **Configuration** : Variables d'environnement pour serveurs
 - **Tests** : Création de test_query_utils.py
 - **Logs** : Configuration du système de logging

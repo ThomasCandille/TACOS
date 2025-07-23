@@ -18,12 +18,12 @@
 **Rôle :** Définit et centralise toutes les requêtes SQL métier pour l'extraction des données opérationnelles depuis la base de données ANIS
 
 ### Description
-Le fichier [`query.py`](query.py) constitue le référentiel centralisé de toutes les requêtes SQL utilisées dans l'application TACOS. Il contient les requêtes complexes pour extraire les données des Opérations Globales (OG), Notes d'Information (NI), équipes intervenantes et autres entités métier depuis la base de données ANIS via l'API Dremio.
+Le fichier [`query.py`](../query.py) constitue le référentiel centralisé de toutes les requêtes SQL utilisées dans l'application TACOS. Il contient les requêtes complexes pour extraire les données des Opérations Globales (OG), Notes d'Information (NI), équipes intervenantes et autres entités métier depuis la base de données ANIS via l'API Dremio.
 
 ## Fonctionnalités Principales
 
 ### Requêtes de Récupération des Données de Base
-- **GMR (Groupes de Maintenance Régionaux)** : Extraction de la liste complète des GMR disponibles
+- **GMR** : Extraction de la liste complète des GMR disponibles
 - **Opérations Globales et Notes d'Information** : Récupération filtrée par période et GMR
 - **Équipes pilotes et intervenantes** : Extraction des codes d'équipes par contexte
 
@@ -64,8 +64,8 @@ query_get_id_og_from_numero_ni(numero_ni)   # NI numéro → ID technique
 Le module `query.py` est entièrement autonome et ne contient que des fonctions Python pures retournant des chaînes SQL.
 
 ### Intégration avec l'Écosystème TACOS
-- **[script.py](script.py)** : Utilisation principale des requêtes pour génération Excel
-- **[query_utils.py](query_utils.py)** : Exécution des requêtes via `make_query()`
+- **[script.py](../script.py)** : Utilisation principale des requêtes pour génération Excel
+- **[query_utils.py](../query_utils.py)** : Exécution des requêtes via `make_query()`
 - **Base ANIS** : Cible des requêtes via l'API Dremio/Mathis
 
 ### Architecture de Base de Données
@@ -354,7 +354,7 @@ logging.info(f"Requête retourne {len(result)} résultats")
 6. **Formatage** : SQL indenté et lisible avec f-strings
 
 ### Fichiers Associés à Modifier
-- **[script.py](script.py)** : Appels aux nouvelles requêtes
-- **[query_utils.py](query_utils.py)** : Aucune modification nécessaire (générique)
+- **[script.py](../script.py)** : Appels aux nouvelles requêtes
+- **[query_utils.py](../query_utils.py)** : Aucune modification nécessaire (générique)
 - **Tests** : Création de test_query.py pour validation
 - **Documentation** : Mise à jour du schéma de base de données

@@ -13,7 +13,7 @@
 ## Aperçu du Fichier
 
 ### Description
-Le fichier `style.css` est la feuille de style principale de l'application web TACOS. Il fournit l'ensemble des styles visuels pour une interface utilisateur moderne et cohérente, conçue pour ressembler à une application mobile avec des dimensions fixes de 375x677 pixels.
+Le fichier `style.css` est la feuille de style principale de l'application TACOS. Il fournit l'ensemble des styles visuels pour une interface utilisateur.
 
 ### Type et Technologie
 - **Type** : Feuille de style CSS3
@@ -28,9 +28,9 @@ Ce fichier CSS est le style principal référencé par toutes les pages HTML du 
 
 ### Rôle et Responsabilités
 - Définition de l'apparence visuelle complète de l'application
-- Gestion du layout responsive pour une expérience mobile-first
+- Gestion du layout responsive
 - Standardisation des composants d'interface (boutons, formulaires, loaders)
-- Implémentation du système de couleurs RTE (bleu corporatif)
+- Implémentation du système de couleurs RTE
 
 ## Fonctionnalités Principales
 
@@ -68,11 +68,11 @@ time, mark, audio, video {
 ```
 
 ### Composants d'Interface Principaux
-1. **Container Principal** : Layout fixe mobile (375x677px)
+1. **Container Principal** : Layout fixe
 2. **Formulaires** : Styles pour inputs, radios, checkboxes
 3. **Boutons** : Système de boutons avec états hover/active
 4. **Listes déroulantes** : Styles pour les sélecteurs avec scroll
-5. **Loader animé** : Animation CSS complexe pour les états de chargement
+5. **Loader animé** : Animation CSS pour les états de chargement
 
 ### Animations et Effets
 - Loader animé avec keyframes
@@ -98,14 +98,14 @@ background-image: url("../img/eolienneautre.png");
 ### Structure des Dépendances
 - **Fonts** : `/fonts/NunitoSans-Regular.ttf`
 - **Images** : `/img/eolienneautre.png` (image de fond page connexion)
-- **Aucune dépendance CSS externe** (framework autonome)
+- **Aucune dépendance CSS externe**
 
 ## Structure du Code
 
 ### Organisation Hiérarchique
 
 #### 1. Reset CSS
-Reset complet de tous les éléments HTML pour assurer la cohérence cross-browser.
+Reset complet de tous les éléments HTML.
 
 #### 2. Styles de Base
 ```css
@@ -133,13 +133,13 @@ body {
 
 #### 4. Composants Spécialisés
 - **Page de Connexion** : Styles spécifiques avec image de fond
-- **Header** : Navigation et branding
+- **Header** : Branding
 - **Formulaires** : Styles complets pour tous les types d'inputs
 - **Boutons** : Système de boutons avec variantes
 
 #### 5. Composants Avancés
 - **Listes de Sélection** : Scrollables avec interactions
-- **Loader Animé** : Animation CSS complexe
+- **Loader Animé** : Animation CSS
 - **Classes Utilitaires** : `.hidden`, `.container_button`, etc.
 
 ### Flux d'Exécution
@@ -253,12 +253,9 @@ color: green;     /* Validée */
 ### Compatibilité
 - **CSS3** : Utilisation de propriétés modernes (flexbox, border-radius, box-shadow)
 - **Cross-browser** : Reset CSS complet pour assurer la cohérence
-- **Mobile-first** : Design optimisé pour les dimensions mobiles
 
 ### Limitations
-- **Dimensions fixes** : Layout non-responsive (375x677px fixes)
 - **Overflow hidden** : Peut causer des problèmes sur petits écrans
-- **Dépendance aux IDs** : Certains styles utilisent des sélecteurs d'ID spécifiques
 
 ### Mesures de Sécurité
 - **Pas de contenu externe** : Toutes les ressources sont locales
@@ -280,7 +277,7 @@ filter: blur(4px) contrast(10) hue-rotate(270deg);
 
 #### Ajout de Nouveaux Composants
 1. Suivre la structure existante avec classes `.component_name`
-2. Respecter les dimensions du container (375px width)
+2. Respecter les dimensions du container
 3. Utiliser les couleurs RTE définies
 
 #### Modification des Couleurs
@@ -307,8 +304,6 @@ filter: blur(4px) contrast(10) hue-rotate(270deg);
 ### Procédures de Débogage
 1. **Vérifier les chemins des ressources** : Fonts et images
 2. **Tester les animations** : Performances du loader
-3. **Valider la responsivité** : Dans les dimensions fixes
-4. **Contrôler les z-index** : Pour les éléments superposés
 
 ### Guidelines de Contribution
 - **Cohérence** : Respecter la nomenclature existante des classes
@@ -321,7 +316,3 @@ filter: blur(4px) contrast(10) hue-rotate(270deg);
 - Validation W3C CSS
 - Test des animations sur différents appareils
 - Vérification des chemins de ressources
-
----
-
-*Documentation générée pour le projet TACOS - Application de gestion des opérations RTE*

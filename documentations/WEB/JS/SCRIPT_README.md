@@ -144,14 +144,9 @@ response_tuple = [error_code, error_message]
 - **Redimensionnement** : Automatique au chargement
 
 ### Éléments DOM Requis
-```javascript
-// IDs obligatoires dans le HTML
-const required_elements = [
-  'nni',        // Input NNI
-  'password',   // Input mot de passe  
-  'getdata'     // Bouton de connexion
-];
-```
+- `#nni` : Champ de saisie NNI
+- `#password` : Champ de saisie mot de passe
+- `#getdata` : Bouton de soumission
 
 ### Variables d'Environnement
 - Aucune variable d'environnement directe
@@ -171,12 +166,11 @@ const required_elements = [
 
 ### Limitations Connues
 - **Dépendance Eel** : L'application ne fonctionne que si le serveur Python Eel est actif
-- **Taille de fenêtre fixe** : Pas d'adaptation responsive
 - **Validation limitée** : Aucune validation côté client des formats de données
 
 ### Compatibilité
 - **Navigateurs** : Chrome, Firefox, Safari (versions récentes)
-- **Systèmes** : Compatible multi-plateforme (Windows, Linux, macOS)
+- **Systèmes** : Compatible plateforme Windows
 - **JavaScript** : ES5+ requis pour les arrow functions
 
 ## Maintenance & Développement
@@ -231,6 +225,4 @@ console.log("Eel call initiated");
 ### Points d'Extension Futurs
 - Validation côté client avancée
 - Gestion de session
-- Interface responsive
 - Support multilingue
-- Amélioration de l'UX

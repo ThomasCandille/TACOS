@@ -18,7 +18,7 @@
 **Rôle :** Orchestrateur central gérant l'authentification, la récupération de données, la logique métier et la génération de fiches Excel de coordination
 
 ### Description
-Le fichier [`script.py`](script.py) constitue le cœur de l'application TACOS. Il expose les fonctions Python via le framework Eel pour l'interface web, gère la communication avec la base de données ANIS, implémente la logique de validation des opérations et orchestre la génération automatisée de fiches Excel de coordination personnalisées.
+Le fichier [`script.py`](../script.py) constitue le cœur de l'application TACOS. Il expose les fonctions Python via le framework Eel pour l'interface web, gère la communication avec la base de données ANIS, implémente la logique de validation des opérations et orchestre la génération automatisée de fiches Excel de coordination personnalisées.
 
 ## Fonctionnalités Principales
 
@@ -335,7 +335,6 @@ if getColumn(j) == 'AM':  # Limite calendrier
 ### Limitations Connues
 - **Excel requis** : Dépendance à Microsoft Excel via xlwings
 - **Mono-utilisateur** : Variables globales partagées
-- **Limite calendrier** : Arrêt à la colonne AM (limite Excel template)
 - **Pas de cache** : Requêtes répétées vers la base de données
 
 ## Maintenance & Développement
@@ -415,18 +414,7 @@ def test_validation_operations():
 6. **State Management** : Minimiser l'usage des variables globales
 
 ### Fichiers Associés à Modifier
-- **[web/](web/)** : Interface utilisateur et scripts JavaScript
-- **[query.py](query.py)** : Nouvelles requêtes SQL si nécessaire
-- **[function_utils.py](function_utils.py)** : Fonctions utilitaires métier
-- **[TEMPLATE.xlsm](_internal/TEMPLATE.xlsm)** : Template Excel à modifier
-- **Tests** : Création de test_script.py pour validation
-
-### Procédures de Déploiement
-```python
-# Build d'un exécutable avec PyInstaller
-# pyinstaller --onefile --add-data "web;web" --add-data "_internal;_internal" script.py
-
-# Configuration des chemins pour exécutable
-exe_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-sys.path.insert(0, f"{exe_dir}\\_internal\\query.py")
-```
+- **[web/](../web/)** : Interface utilisateur et scripts JavaScript
+- **[query.py](../query.py)** : Nouvelles requêtes SQL si nécessaire
+- **[function_utils.py](../function_utils.py)** : Fonctions utilitaires métier
+- **[TEMPLATE.xlsm](../TEMPLATE.xlsm)** : Template Excel à modifierS

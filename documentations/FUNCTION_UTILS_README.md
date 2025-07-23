@@ -15,10 +15,10 @@
 **Type :** Module Python utilitaire  
 **Technologie :** Python 3.x avec module datetime  
 **Position :** Couche utilitaire dans l'architecture TACOS  
-**Rôle :** Fournit des fonctions d'assistance pour la manipulation de données, la validation métier et la génération de fichiers Excel dans l'application TACOS
+**Rôle :** Fournit des fonctions d'assistance pour la manipulation de données, la validation des critères métier et la génération de fichiers Excel dans l'application TACOS
 
 ### Description
-Le fichier [`function_utils.py`](function_utils.py) constitue une bibliothèque de fonctions utilitaires essentielles pour le traitement des opérations globales et la génération des fiches de coordination Excel. Il centralise la logique métier de validation, les calculs de dates, la gestion des couleurs Excel et les algorithmes de positionnement de colonnes.
+Le fichier [`function_utils.py`](../function_utils.py) constitue une bibliothèque de fonctions utilitaires essentielles pour le traitement des opérations globales et la génération des fiches de coordination Excel. Il centralise la logique métier de validation, les calculs de dates, la gestion des couleurs Excel et les algorithmes de positionnement de colonnes.
 
 ## Fonctionnalités Principales
 
@@ -93,8 +93,8 @@ import datetime  # Manipulation des dates et calculs temporels
 ```
 
 ### Intégration avec l'Écosystème TACOS
-- **[script.py](script.py)** : Utilisation dans la génération Excel via xlwings
-- **[query.py](query.py)** : Traitement des données issues des requêtes ANIS
+- **[script.py](../../script.py)** : Utilisation dans la génération Excel via xlwings
+- **[query.py](../../query.py)** : Traitement des données issues des requêtes ANIS
 - **Template Excel** : Application des couleurs et positionnement dans TEMPLATE.xlsm
 
 ### Dépendances Implicites
@@ -262,7 +262,6 @@ REFERENCE_CELLS = {
 ## Notes Techniques
 
 ### Considérations de Performance
-- **Algorithme O(1)** : Conversion index → colonne en temps constant
 - **Validation en circuit court** : Arrêt dès qu'un critère invalide est détecté
 - **Gestion mémoire** : Fonctions sans état, pas d'accumulation de données
 
@@ -370,7 +369,7 @@ def is_operation_valid(operation, list_equipe):
 6. **Robustesse** : Gérer les cas d'erreur (données manquantes, formats invalides)
 
 ### Fichiers Associés à Modifier
-- **[script.py](script.py)** : Utilisation principale des fonctions utilitaires
+- **[script.py](../script.py)** : Utilisation principale des fonctions utilitaires
 - **TEMPLATE.xlsm** : Définition des cellules de référence couleurs
 - **Tests unitaires** : Création de test_function_utils.py
 - **Documentation** : Mise à jour des spécifications métier

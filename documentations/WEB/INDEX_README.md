@@ -18,7 +18,7 @@
 **Rôle :** Interface de connexion permettant l'authentification utilisateur avant l'accès aux fonctionnalités de génération de fiches de coordination
 
 ### Description
-Le fichier [`index.html`](web/index.html) constitue la page d'accueil et d'authentification de l'application TACOS. Il fournit une interface de connexion sécurisée utilisant les identifiants NNI (Numéro National d'Identification) et mot de passe pour l'accès aux données de la base ANIS et aux fonctionnalités de génération de fiches Excel.
+Le fichier [`index.html`](../../web/index.html) constitue la page d'accueil et d'authentification de l'application TACOS. Il fournit une interface de connexion sécurisée utilisant les identifiants NNI et mot de passe pour l'accès aux données de la base ANIS et aux fonctionnalités de génération de fiches Excel.
 
 ## Fonctionnalités Principales
 
@@ -51,7 +51,7 @@ Le fichier [`index.html`](web/index.html) constitue la page d'accueil et d'authe
 - **Layout responsive** : Interface adaptée aux dimensions d'application desktop
 
 ### Navigation Post-Authentification
-- **Redirection automatique** : Vers [`filters.html`](web/pages/filters.html) après connexion réussie
+- **Redirection automatique** : Vers [`filters.html`](../../web/pages/filters.html) après connexion réussie
 - **Feedback utilisateur** : Messages d'erreur via alertes JavaScript
 
 ## Dépendances & Imports
@@ -75,14 +75,14 @@ Le fichier [`index.html`](web/index.html) constitue la page d'accueil et d'authe
 ```
 
 ### Dépendances du Projet
-- **[style.css](web/css/style.css)** : Feuille de style principale avec styles spécialisés pour la connexion
-- **[script.js](web/js/script.js)** : Logique de connexion et communication backend
+- **[style.css](../../web/css/style.css)** : Feuille de style principale avec styles spécialisés pour la connexion
+- **[script.js](../../web/js/script.js)** : Logique de connexion et communication backend
 - **eel.js** : Bridge de communication avec le backend Python
 - **Assets RTE** : Logos et images d'identité visuelle
 
 ### Intégration Backend
-- **[script.py](script.py)** : Serveur Python avec fonctions d'authentification exposées
-- **API ANIS** : Système d'authentification RTE via [`query_utils.py`](query_utils.py)
+- **[script.py](../../script.py)** : Serveur Python avec fonctions d'authentification exposées
+- **API ANIS** : Système d'authentification RTE via [`query_utils.py`](../../query_utils.py)
 - **Session Management** : Gestion des tokens d'authentification
 
 ## Structure du Code
@@ -109,8 +109,8 @@ Le fichier [`index.html`](web/index.html) constitue la page d'accueil et d'authe
 ### Flux d'Authentification
 1. **Chargement initial** : Affichage du formulaire de connexion
 2. **Saisie utilisateur** : NNI et mot de passe avec validation HTML5
-3. **Soumission** : Appel JavaScript vers [`script.js`](web/js/script.js)
-4. **Validation backend** : Communication Eel vers [`script.py`](script.py)
+3. **Soumission** : Appel JavaScript vers [`script.js`](../../web/js/script.js)
+4. **Validation backend** : Communication Eel vers [`script.py`](../../script.py)
 5. **Réponse** : Redirection ou affichage d'erreur
 
 ### Mécanismes de Validation
@@ -298,10 +298,10 @@ document.getElementById('getdata').onclick = () => {
 5. **Accessibilité** : Conserver les attributs `alt`, `required`, et la navigation clavier
 
 ### Fichiers Associés à Modifier
-- **[script.js](web/js/script.js)** : Logique d'authentification et navigation
-- **[script.py](script.py)** : Fonction backend `get_data()` pour nouveaux paramètres
-- **[style.css](web/css/style.css)** : Styles pour nouveaux éléments d'interface
-- **[query_utils.py](query_utils.py)** : Fonctions d'authentification si modifications nécessaires
+- **[script.js](../../web/js/script.js)** : Logique d'authentification et navigation
+- **[script.py](../../script.py)** : Fonction backend `get_data()` pour nouveaux paramètres
+- **[style.css](../../web/css/style.css)** : Styles pour nouveaux éléments d'interface
+- **[query_utils.py](../../query_utils.py)** : Fonctions d'authentification si modifications nécessaires
 
 ### Procédures de Débogage
 ```javascript
