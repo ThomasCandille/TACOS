@@ -1,1 +1,4 @@
 ReadMe_Prompt.txt
+.venv
+.vscode
+__pycache__
