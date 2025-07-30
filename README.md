@@ -333,3 +333,7 @@ Le système garantit la traçabilité complète du processus et la conformité d
 ## Output de la console d'execution
 
 Lors de l'exécution du script, la console affichera les données des requetes SQL Dremio, les erreurs éventuelles et les étapes de progression. Les information y seront en brut.
+
+## A propos de la Documentation
+
+La documentation de ce projet a été généré grâce à l'IA. Meme apres une relecture, il est possible qu'il y ait des erreurs. Si vous en trouvez, n'hésitez pas à les corriger et à les soumettre en tant que PR.
