@@ -337,4 +337,3 @@ Lors de l'exécution du script, la console affichera les données des requetes S
 ## A propos de la Documentation
 
 La documentation de ce projet a été généré grâce à l'IA. Meme apres une relecture, il est possible qu'il y ait des erreurs. Si vous en trouvez, n'hésitez pas à les corriger et à les soumettre en tant que PR.
-Merci de votre compréhension et de votre collaboration.
