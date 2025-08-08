@@ -71,13 +71,13 @@ Le module `query.py` est entièrement autonome et ne contient que des fonctions 
 ### Architecture de Base de Données
 ```sql
 -- Base de données production
-"PRIV_ANIS".INPUT.ANIS."PROD_ANIS".ANIS."TBxxx"
+-- "PRIV_ANIS".INPUT.ANIS."PROD_ANIS".ANIS."TBxxx"
 
 -- Base de données intégration (commentée)
 -- "PUBLIC".ANIS."REC_ANIS".ANIS."TBxxx"
 
 -- Base de données publique (alternative)
--- "PUBLIC".ANIS."TBxxx"
+"PUBLIC".ANIS."TBxxx"
 ```
 
 ## Structure du Code
@@ -191,12 +191,12 @@ equipes_ni = make_query(equipes_ni_query, headers)
 
 ### Schémas de Base de Données
 ```python
-# Configuration production (par défaut)
-PROD_SCHEMA = '"PRIV_ANIS".INPUT.ANIS."PROD_ANIS".ANIS."TBxxx"'
+# Configuration publique (par défaut)
+PROD_SCHEMA = '"PUBLIC".ANIS."TBxxx"'
 
 # Alternatives disponibles (commentées dans le code)
 # INTEGRATION_SCHEMA = '"PUBLIC".ANIS."REC_ANIS".ANIS."TBxxx"'
-# PUBLIC_SCHEMA = '"PUBLIC".ANIS."TBxxx"'
+# PRODUCTION_SCHEMA = '"PRIV_ANIS".INPUT.ANIS."PROD_ANIS".ANIS."TBxxx"'
 ```
 
 ### Tables de la Base ANIS Utilisées
@@ -287,7 +287,7 @@ def query_nouvelle_fonctionnalite(param1, param2):
     """
     return f"""
         SELECT colonne1, colonne2
-        FROM "PRIV_ANIS".INPUT.ANIS."PROD_ANIS".ANIS."TB_NOUVELLE"
+        FROM "PUBLIC".ANIS."TB_NOUVELLE"
         WHERE condition1 = '{param1}' AND condition2 = '{param2}'
     """
 ```

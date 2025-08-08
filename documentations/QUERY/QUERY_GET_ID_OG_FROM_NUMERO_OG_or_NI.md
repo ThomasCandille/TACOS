@@ -26,7 +26,7 @@ Tables impliquées : 1
 **Code SQL :**
 ```sql
 SELECT ID_OG 
-FROM "PRIV_ANIS".INPUT.ANIS."PROD_ANIS".ANIS."TB025_OPERATION_GLOBALE" 
+FROM "PUBLIC".ANIS."TB025_OPERATION_GLOBALE" 
 WHERE NUMERO_OG = '{numero_og}'
 ```
 
@@ -80,7 +80,7 @@ Tables impliquées : 1
 **Code SQL :**
 ```sql
 SELECT ID_OG 
-FROM "PRIV_ANIS".INPUT.ANIS."PROD_ANIS".ANIS."TB001_NOTE_INFORMATION" 
+FROM "PUBLIC".ANIS."TB001_NOTE_INFORMATION" 
 WHERE NUMERO_NI = '{numero_ni}'
 ```
 
@@ -170,7 +170,7 @@ Chemin 2: NUMERO_NI ──────► query_get_id_og_from_numero_ni() ─�
 ```sql
 -- Ajouter une validation d'existence
 SELECT ID_OG 
-FROM "PRIV_ANIS".INPUT.ANIS."PROD_ANIS".ANIS."TB025_OPERATION_GLOBALE" 
+FROM "PUBLIC".ANIS."TB025_OPERATION_GLOBALE" 
 WHERE NUMERO_OG = '{numero_og}' 
   AND NUMERO_OG IS NOT NULL
 ```
