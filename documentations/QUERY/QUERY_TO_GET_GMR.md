@@ -22,7 +22,7 @@ Tables impliquées : 1
 **Code SQL :**
 ```sql
 SELECT DISTINCT TB009_GMR.LIBELLE AS GMR 
-FROM "PRIV_ANIS".INPUT.ANIS."PROD_ANIS".ANIS."TB009_GMR"
+FROM "PUBLIC".ANIS."TB009_GMR"
 ```
 
 ## Schéma Arborescent des Tables et Données
@@ -74,7 +74,7 @@ CONDITIONS APPLIQUÉES
 ```sql
 -- Version optimisée suggérée
 SELECT DISTINCT TB009_GMR.LIBELLE AS GMR 
-FROM "PRIV_ANIS".INPUT.ANIS."PROD_ANIS".ANIS."TB009_GMR"
+FROM "PUBLIC".ANIS."TB009_GMR"
 WHERE TB009_GMR.LIBELLE IS NOT NULL
 ORDER BY TB009_GMR.LIBELLE
 ```
@@ -110,7 +110,7 @@ def get_gmr():
 ### Environnement de Production
 ```
 Environnement : Production ANIS
-Chemin complet : "PRIV_ANIS".INPUT.ANIS."PROD_ANIS".ANIS."TB009_GMR"
+Chemin complet : "PUBLIC".ANIS."TB009_GMR"
 Schema : ANIS
 Table : TB009_GMR (Table de référence des Groupes de Maintenance Réseau)
 ```
